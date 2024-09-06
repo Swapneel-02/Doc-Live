@@ -1,12 +1,14 @@
+'use client'
+
 import React from 'react'
 import {ClientSideSuspense, LiveblocksProvider} from  "@liveblocks/react/suspense";
+import Loader from '@/components/Loader';
 
 const Provider = ({children}:{children: React.ReactNode}) => {
   return (
     <div>
-        <LiveblocksProvider publicApiKey={"pk_prod_KdUw6gxRH1KkOdZUTLxjMRgB1w0KSc6fQ78WECj6291SJsTQLZ-BDeCilogu4QXA"}>
-        //will add room here later
-        <ClientSideSuspense fallback={<div>Loading…</div>}>
+        <LiveblocksProvider authEndpoint="/api/liveblocks-auth">
+        <ClientSideSuspense fallback={<Loader/>}>
           {children}
         </ClientSideSuspense>
     </LiveblocksProvider>

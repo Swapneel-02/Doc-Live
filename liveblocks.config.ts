@@ -18,6 +18,7 @@ declare global {
     UserMeta: {
       id: string;
       info: {
+        // Example properties, for useSelf, useUser, useOthers, etc.
         id: string;
         name: string;
         email: string;
