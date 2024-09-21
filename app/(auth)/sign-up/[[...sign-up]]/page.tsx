@@ -5,7 +5,6 @@ const SignUpPage = () => {
   return (
     <main className="auth-page">
         <SignUp/>
-
     </main>
   )
 }
